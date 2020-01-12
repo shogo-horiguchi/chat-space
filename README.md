@@ -32,7 +32,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### message_association
+### messages_association
 - belongs_to :group
 - belongs_to :user
 

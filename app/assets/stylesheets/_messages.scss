@@ -98,6 +98,7 @@ a{
       }
       a{
         color: #38aef0;
+        font-size: 15px;
       }
   }
   &__messageList{
@@ -163,10 +164,11 @@ a{
     &--submitBtn{
       margin-right:40px;
       background-color: #38aef0;
-      color: whitesmoke;
+      color: #ffffff;
       height: 50px;
       width: 72px;
       cursor: pointer;
+      font-size: 15px;
     }
   }
 }

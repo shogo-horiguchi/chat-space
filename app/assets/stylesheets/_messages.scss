@@ -14,10 +14,49 @@
   &__header{
     height: 100px;
     background-color: #253141;
+    display: flex;
+    justify-content: space-between;
+    &--userName{
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 100px;
+      color:#ffffff;
+      margin-left:20px;
+    }
+    ul{
+      width: 60px;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px;
+      line-height: 100px;
+    }
+      li{
+        cursor: pointer;
+        margin-left: 5px;
+      }
+        a{
+          color: white;
+        }
   }
-  &__groupName{
+  &__aboutGroup{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
+    &--detail{
+      height: 100px;
+      width: 300px;
+    }
+      &--groupName{
+        padding: 20px 20px 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color:#ffffff;
+      }
+      &--groupLatestMessage{
+        padding: 0 20px 40px;
+        font-size: 11px;
+        font-weight: bold;
+        color:#ffffff;
+      }
   }
 }
 

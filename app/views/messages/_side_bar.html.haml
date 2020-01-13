@@ -1,8 +1,19 @@
 .sideBar
   .sideBar__header
     .sideBar__header--userName
-    .sideBar__header--newGroupIcon
-    .sideBar__header--userSettingIcon
-    
-  .sideBar__groupName
-  
+      masa
+    %ul.sideBar__menu
+      %li.sideBar__menu-newGroupBtn
+        = link_to "#" do
+          = icon('fas', 'edit')
+      %li.sideBar__menu-userSettingIcon
+        = link_to "#" do
+          = icon('fas', 'cog')
+
+  .sideBar__aboutGroup
+    .sideBar__aboutGroup-detail
+      .sideBar__aboutGroup--groupName
+        techchamp
+      .sideBar__aboutGroup--groupLatestMessage
+        まだメッセージはありません。
+

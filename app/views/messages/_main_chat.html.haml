@@ -21,7 +21,7 @@
 
     .mainChat__messageList--detail
       %ul.mainChat__messageList--whoAndWhen
-        %li.mainChat__messageList--contributer
+        %li.mainChat__messageList--contributor
           shogo-horiguchi
         %li.mainChat__messageList--date
           2019/1/14(Tue)
@@ -30,10 +30,13 @@
       
 
   .mainChat__messageForm
-    .mainChat__messageInput
-      .mainChat__messageInput--text
-      .mainChat__messageInput--image
-    
-    .mainChat__messageBtn
+    .mainChat__messageForm--input
+      %form.mainChat__messageForm--input-field
+        %input{type:"text", placeholder:"type a message", class:"mainChat__messageForm--text"}
+      %label{class: "mainChat__messageForm--imageIcon"}
+        = icon('fas', 'image')
+        %input{type: "file", style:"display:none"}
+    %form
+      %input{type:"submit", value:"Send", class:"mainChat__messageForm--submitBtn"}
 
 

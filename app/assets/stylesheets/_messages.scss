@@ -7,8 +7,8 @@ a{
 }
 
 .wrapper{
-    width:100%;
-    display:flex;
+    width:100vw;
+    display:flex;;
 }
 
 .sideBar{
@@ -114,7 +114,7 @@ a{
       li{
         padding-right: 10px;
       }
-      &--contributer{
+      &--contributor{
         color:#333333;
         font-size: 16px;
         line-height: 30px;
@@ -135,5 +135,38 @@ a{
     width: calc(100vw - 300px);
     position: fixed;
       bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &--input-field{
+      width: 100%;
+    }
+    &--input{
+      margin:10px 15px 10px 40px;
+      display: flex;
+      width: 100%;
+      position: relative;
+    }
+    &--text{
+      padding-left: 10px;
+      width: 100%;
+      height: 50px;
+      cursor: context-menu;
+    }
+    &--imageIcon{
+      line-height: 50px;
+      font-size: 20px;
+      position: absolute;
+        right: 10px;
+      cursor: pointer;
+    }
+    &--submitBtn{
+      margin-right:40px;
+      background-color: #38aef0;
+      color: whitesmoke;
+      height: 50px;
+      width: 100px;
+      cursor: pointer;
+    }
   }
 }

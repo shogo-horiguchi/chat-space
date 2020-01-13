@@ -24,7 +24,7 @@ a{
       font-size: 16px;
       font-weight: bold;
       line-height: 100px;
-      color:#ffffff;
+      color: #ffffff;
       margin-left:20px;
     }
     ul{
@@ -95,6 +95,7 @@ a{
         border:solid 1px#38aef0;
         padding: 0 20px;
         margin-right: 40px;
+        text-align: center;
       }
       a{
         color: #38aef0;
@@ -135,6 +136,7 @@ a{
     width: calc(100vw - 300px);
     position: fixed;
       bottom: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,7 +167,7 @@ a{
       background-color: #38aef0;
       color: whitesmoke;
       height: 50px;
-      width: 100px;
+      width: 72px;
       cursor: pointer;
     }
   }

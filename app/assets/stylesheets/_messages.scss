@@ -7,14 +7,13 @@ a{
 }
 
 .wrapper{
-    width:100vw;
-    display:flex;;
+  width:100vw;
+  display:flex;
 }
 
 .sideBar{
   height: 100vh;
   width: 300px;
-  background-color: #253141;
   &__header{
     height: 100px;
     background-color: #253141;
@@ -24,7 +23,7 @@ a{
       font-size: 16px;
       font-weight: bold;
       line-height: 100px;
-      color: #ffffff;
+      color:$sideBarLetterColor;
       margin-left:20px;
     }
     ul{
@@ -38,7 +37,7 @@ a{
         margin-left: 5px;
       }
         a{
-          color: white;
+          color:$sideBarLetterColor;
         }
   }
   &__aboutGroup{
@@ -54,13 +53,13 @@ a{
         padding: 20px 20px 5px;
         font-size: 15px;
         font-weight: bold;
-        color:#ffffff;
+        color:$sideBarLetterColor;
       }
       &--groupLatestMessage{
         padding: 0 20px 20px;
         font-size: 11px;
         font-weight: bold;
-        color:#ffffff;
+        color:$sideBarLetterColor;
       }
   }
 }
@@ -80,7 +79,7 @@ a{
         margin-left:40px;
       }
         &--left-groupName{
-          color: #333333;
+          color:$mainChatLetterColor;
           font-size: 20px;
           padding-bottom:15px ;
         }
@@ -106,7 +105,6 @@ a{
     background-color:#fafafa;
     &--detail{
       padding:35px 0 0 40px;
-    
     }
     ul{
       display: flex;
@@ -116,7 +114,7 @@ a{
         padding-right: 10px;
       }
       &--contributor{
-        color:#333333;
+        color:$mainChatLetterColor;
         font-size: 16px;
         line-height: 30px;
       }

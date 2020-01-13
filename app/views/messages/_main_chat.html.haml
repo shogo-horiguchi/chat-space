@@ -1,12 +1,33 @@
 .mainChat
   .mainChat__header
-    .mainChat__headerLeft
-      .mainChat__headerLeft--groupName
-      .mainChat__headerLeft--groupMember
+    .mainChat__header--left-currentGroup
+      .mainChat__header--left-groupName
+        test
+      .mainChat__header--left-groupMembers
+        Member: shogo-horiguchi
+    .mainChat__header--right-editBtn
+      = link_to "#" do
+        Edit
 
-    .mainChat__headerRight
+  .mainChat__messageList
+    .mainChat__messageList--detail
+      %ul.mainChat__messageList--whoAndWhen
+        %li.mainChat__messageList--contributer
+          shogo-horiguchi
+        %li.mainChat__messageList--date
+          2019/1/13(Mon)
+      .mainChat__messageList--content
+        おはようございます。
 
-  .mainChat__messagesList
+    .mainChat__messageList--detail
+      %ul.mainChat__messageList--whoAndWhen
+        %li.mainChat__messageList--contributer
+          shogo-horiguchi
+        %li.mainChat__messageList--date
+          2019/1/14(Tue)
+      .mainChat__messageList--content
+        よろしくお願いします。
+      
 
   .mainChat__messageForm
     .mainChat__messageInput

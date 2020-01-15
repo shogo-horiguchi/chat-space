@@ -4,10 +4,10 @@
       #{current_user.name}
     %ul.sideBar__menu
       %li.sideBar__menu-newGroupIcon
-        = link_to edit_user_path(current_user) do
+        = link_to "#" do
           = icon('fas', 'edit')
       %li.sideBar__menu-userSettingIcon
-        = link_to "#" do
+        = link_to edit_user_path(current_user)  do
           = icon('fas', 'cog')
 
   .sideBar__aboutGroup

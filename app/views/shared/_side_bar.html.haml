@@ -1,0 +1,20 @@
+.sideBar
+  .sideBar__header
+    .sideBar__header--userName
+      #{current_user.name}
+    %ul.sideBar__menu
+      %li.sideBar__menu-newGroupIcon
+        = link_to new_group_path do
+          = icon('fas', 'edit')
+      %li.sideBar__menu-userSettingIcon
+        = link_to edit_user_path(current_user.id)  do
+          = icon('fas', 'cog')
+
+  .sideBar__aboutGroup
+    - current_user.groups.each do |group|
+      .group
+        = link_to "#" do
+          .sideBar__aboutGroup--groupName
+            = group.name
+          .sideBar__aboutGroup--groupLatestMessage
+            まだメッセージはありません。

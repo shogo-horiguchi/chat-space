@@ -12,7 +12,7 @@
 
   .sideBar__aboutGroup
     - current_user.groups.each do |group|
-      .group
+      .sideBar__aboutGroup--details
         = link_to "#" do
           .sideBar__aboutGroup--groupName
             = group.name

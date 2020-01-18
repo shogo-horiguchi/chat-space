@@ -1,2 +1,39 @@
 .mainChat
-  = render @messages
+  .mainChat__header
+    .mainChat__header--left-currentGroup
+      .mainChat__header--left-groupName
+        test
+      .mainChat__header--left-groupMembers
+        Member: shogo-horiguchi
+    .mainChat__header--right-editBtn
+      = link_to "#" do
+        Edit
+
+  .mainChat__messageList
+    .mainChat__messageList--detail
+      %ul.mainChat__messageList--whoAndWhen
+        %li.mainChat__messageList--contributor
+          shogo-horiguchi
+        %li.mainChat__messageList--date
+          2019/1/13(Mon)
+      .mainChat__messageList--content
+        おはようございます。
+
+    .mainChat__messageList--detail
+      %ul.mainChat__messageList--whoAndWhen
+        %li.mainChat__messageList--contributor
+          shogo-horiguchi
+        %li.mainChat__messageList--date
+          2019/1/14(Tue)
+      .mainChat__messageList--content
+        よろしくお願いします。
+      
+
+  .mainChat__messageForm
+    .mainChat__messageForm--input
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class:" mainChat__messageForm--text", placeholder:"type a message" 
+      = f.label :image do
+        = icon('fas', 'image', class:'mainChat__messageForm--image')
+        = f.file_field :image, class:"mainChat__messageForm--hidden"
+      = f.submit 'Send', class:"mainChat__messageForm--submitBtn"

@@ -31,12 +31,9 @@
 
   .mainChat__messageForm
     .mainChat__messageForm--input
-      %form.mainChat__messageForm--input-field
-        %input{type:"text", placeholder:"type a message", class:"mainChat__messageForm--text"}
-      %label{class: "mainChat__messageForm--imageIcon"}
-        = icon('fas', 'image')
-        %input{type: "file", style:"display:none"}
-    %form
-      %input{type:"submit", value:"Send", class:"mainChat__messageForm--submitBtn"}
-
-
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class:" mainChat__messageForm--text", placeholder:"type a message" 
+      = f.label :image do
+        = icon('fas', 'image', class:'mainChat__messageForm--image')
+        = f.file_field :image, class:"mainChat__messageForm--hidden"
+      = f.submit 'Send', class:"mainChat__messageForm--submitBtn"

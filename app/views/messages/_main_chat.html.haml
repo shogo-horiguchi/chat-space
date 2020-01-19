@@ -2,41 +2,24 @@
   .mainChat__header
     .mainChat__header--left-currentGroup
       .mainChat__header--left-groupName
-        test
+        = @group.name
       .mainChat__header--left-groupMembers
-        Member: shogo-horiguchi
+        Member:
+        - @group.users.each do |user|
+          = user.name
     .mainChat__header--right-editBtn
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         Edit
 
   .mainChat__messageList
     .mainChat__messageList--detail
-      %ul.mainChat__messageList--whoAndWhen
-        %li.mainChat__messageList--contributor
-          shogo-horiguchi
-        %li.mainChat__messageList--date
-          2019/1/13(Mon)
-      .mainChat__messageList--content
-        おはようございます。
-
-    .mainChat__messageList--detail
-      %ul.mainChat__messageList--whoAndWhen
-        %li.mainChat__messageList--contributor
-          shogo-horiguchi
-        %li.mainChat__messageList--date
-          2019/1/14(Tue)
-      .mainChat__messageList--content
-        よろしくお願いします。
-      
+      = render @messages
 
   .mainChat__messageForm
     .mainChat__messageForm--input
-      %form.mainChat__messageForm--input-field
-        %input{type:"text", placeholder:"type a message", class:"mainChat__messageForm--text"}
-      %label{class: "mainChat__messageForm--imageIcon"}
-        = icon('fas', 'image')
-        %input{type: "file", style:"display:none"}
-    %form
-      %input{type:"submit", value:"Send", class:"mainChat__messageForm--submitBtn"}
-
-
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class:" mainChat__messageForm--text", placeholder:"type a message" 
+      = f.label :image do
+        = icon('fas', 'image', class:'mainChat__messageForm--image')
+        = f.file_field :image, class:"mainChat__messageForm--hidden"
+      = f.submit 'Send', class:"mainChat__messageForm--submitBtn"

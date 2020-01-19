@@ -15,7 +15,11 @@ a{
   height: 100vh;
   width: 300px;
   &__header{
+    position: fixed;
+      left: 0px;
+    width: 300px;
     height: 100px;
+    z-index: 1;
     background-color: #253141;
     display: flex;
     justify-content: space-between;
@@ -41,7 +45,11 @@ a{
         }
   }
   &__aboutGroup{
-    height: calc(100vh - 100px);
+    height:100vh;
+    padding-top: 100px;
+    position: fixed;
+      left:0px;
+    width: 300px;
     background-color: #2f3e51;
     &--detail{
       width: 300px;
@@ -66,9 +74,11 @@ a{
 
 .mainChat{
   height: 100vh;
-  width: calc(100vw - 300px);
-  background-color:#ffffff;
+  background-color:#fafafa;
   &__header{
+    width: calc(100vw - 300px);
+    position: fixed;
+      right: 0px;
     height: 100px;
     background-color:#ffffff;
     display: flex;
@@ -102,10 +112,12 @@ a{
       }
   }
   &__messageList{
-    height: calc(100vh - 100px - 90px);
     background-color:#fafafa;
+    width: 100vw;
+    padding:110px 0 100px 300px;
+    overflow: scroll;
     &--detail{
-      padding:35px 0 0 40px;
+      padding:0 0 10px 20px;
     }
     ul{
       display: flex;
@@ -134,41 +146,35 @@ a{
     background-color: #d2d2d2;
     width: calc(100vw - 300px);
     position: fixed;
-      bottom: 0;
+      bottom: 0px;
+      right: 0px;
     z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &--input-field{
-      width: 100%;
-    }
-    &--input{
-      margin:10px 15px 10px 40px;
-      display: flex;
-      width: 100%;
+    line-height: 90px;
+    &--text{
+      height: 50px;
+      margin-left: 40px;
+      width:calc(100% - 180px);
       position: relative;
     }
-    &--text{
-      padding-left: 10px;
-      width: 100%;
-      height: 50px;
-      cursor: context-menu;
-    }
-    &--imageIcon{
-      line-height: 50px;
+    &--image{
       font-size: 20px;
-      position: absolute;
-        right: 10px;
       cursor: pointer;
+      height: 50px;
+      position: absolute;
+        top:35px;
+        right:150px;
+    }
+    &--hidden{
+      display: none;
     }
     &--submitBtn{
-      margin-right:40px;
       background-color: #38aef0;
       color: #ffffff;
       height: 50px;
-      width: 72px;
+      width: 80px;
       cursor: pointer;
       font-size: 15px;
+      margin-left: 15px;
     }
   }
 }

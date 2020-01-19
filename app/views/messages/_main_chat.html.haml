@@ -11,23 +11,7 @@
 
   .mainChat__messageList
     .mainChat__messageList--detail
-      %ul.mainChat__messageList--whoAndWhen
-        %li.mainChat__messageList--contributor
-          shogo-horiguchi
-        %li.mainChat__messageList--date
-          2019/1/13(Mon)
-      .mainChat__messageList--content
-        おはようございます。
-
-    .mainChat__messageList--detail
-      %ul.mainChat__messageList--whoAndWhen
-        %li.mainChat__messageList--contributor
-          shogo-horiguchi
-        %li.mainChat__messageList--date
-          2019/1/14(Tue)
-      .mainChat__messageList--content
-        よろしくお願いします。
-      
+      = render @messages
 
   .mainChat__messageForm
     .mainChat__messageForm--input

@@ -113,8 +113,11 @@ a{
   }
   &__messageList{
     background-color:#fafafa;
-    width: 100vw;
-    padding:110px 0 100px 300px;
+    // width: 100vw;
+    width: calc(100vw - 300px);
+    // padding:110px 0 100px 300px;
+    height: calc(100vh - 190px);
+    margin: 100px 0 90px 0;
     overflow: scroll;
     &--detail{
       padding:0 0 10px 20px;

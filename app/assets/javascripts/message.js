@@ -8,7 +8,7 @@ $(function(){
                         ${message.user_name}
                         </li>
                         <li class="mainChat__messageList--date">
-                        ${message.created_at}
+                        ${message.time}
                         </li>
                       </ul>
                       <div class="mainChat__messageList--content">
@@ -26,7 +26,7 @@ $(function(){
                         ${message.user_name}
                         </li>
                         <li class="mainChat__messageList--date">
-                        ${message.created_at}
+                        ${message.time}
                         </li>
                       </ul>
                       <div class="mainChat__messageList--content">
@@ -56,6 +56,7 @@ $(function(){
       $('.mainChat__messageList--details').append(html);
       $('.mainChat__messageList').animate({ scrollTop: $('.mainChat__messageList')[0].scrollHeight});
       $('#message_body').val('');
+      $('#message_image').val('');
       $('.mainChat__messageForm--submitBtn').prop("disabled", false);
     })
     .fail(function() {
